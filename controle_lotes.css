@@ -161,7 +161,7 @@ pre {
     color: red;
     background-size: 30px 30px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    background-image: url('/imagens/trash.svg');
+    background-image: url('imagens/trash.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
