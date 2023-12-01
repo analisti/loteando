@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Controle de Lotes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../paginas/Estilos/controle_lotes.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+
+<body>
+    <div id="logo"></div>
+    <ul class="menu">
+        <li><a href="../paginas/index.html">Você esta aqui</a></li>
+        <li><a href="../paginas/cad_cliente.html">Cadastro de Clientes</a></li>
+        <li><a href="../paginas/acerto.html">Acerto Escritório</a></li>   
+    </ul>
+
+    <span title="Mudar o Tema" class="styled__MenuBarItem-sc-1ita5x0-6 iMePCS dark">
+        <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 hPhvO">
+            <path fill-rule="evenodd"
+                d="M7.186 19.172c.789.51 1.701.855 2.814.828 1.111.027 2.025-.318 2.814-.828L12.797 17H7.203l-.017 2.172zM12.697 16c0-4.357 4.63-5.848 4.283-10.188-.218-2.738-2.073-5.81-6.98-5.81S3.238 3.074 3.019 5.813C2.672 10.152 7.303 11.643 7.303 16h5.394zM5 6c.207-2.598 2.113-4 5-4 2.886 0 4.654 1.371 4.861 3.969.113 1.424-.705 2.373-1.809 3.926C12.238 11.041 11.449 12.238 11 14H9c-.449-1.762-1.238-2.959-2.053-4.106C5.844 8.342 4.886 7.424 5 6z"
+                clip-rule="evenodd"></path>
+        </svg>
+    </span>
+
+    <main>
+        <h1>Controle de Lotes</h1>
+
+        <div class="form-container">
+            <div class="form-inputs">
+                <input type="number" id="comissaoCorretor" name="comissaoCorretor"
+                    placeholder="Digite a Comissão"><br>
+
+                <input type="number" id="comissaoImobiliaria" name="comissaoImobiliaria"
+                    placeholder="Comissão da Imobiliária"><br>
+
+                <input type="number" id="numeroCorretores" name="numeroCorretores"
+                    placeholder="Qtd. Corretores na Venda"><br>
+
+                <input type="text" id="quadra" name="quadra" placeholder="Digite o Número da Quadra"><br>
+
+                <input type="number" id="numeroLote" name="numeroLote" placeholder="Digite o Número do Lote"><br>
+
+            </div>
+
+            <div class="container">
+                <button onclick="registrarVenda('PIX')">
+                    <i class="fa fa-money"></i> Registrar venda no (PIX)
+                </button>
+                <button onclick="registrarVenda('Cartão de Crédito')">
+                    <i class="fa fa-credit-card"></i> Registrar venda no (Cartão de Crédito)
+                </button>
+                <button onclick="registrarVenda('Dinheiro')">
+                    <i class="fa fa-money"></i> Registrar venda no (Dinheiro)</button>
+                <button onclick="exibirRelatorio()">
+                    <i class="fa fa-file"></i> Exibir a venda</button>
+
+            </div>
+        </div>
+
+        <h2>Relatório:</h2>
+        <pre id="relatorio"></pre>
+
+        <div id="btn-fora">
+            <button onclick="imprimirRelatorio()">
+                <i class="fa fa-file"></i> Imprimir relatório</button>
+                <button id="botaoRemover" onclick="removerUltimoRegistro()">Remover último registro</button>
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+    <footer>
+        <p>
+            Direitos Reservados © analist.com@outlook.com 2023
+        </p>
+    </footer>
+</body>
+
+</html>

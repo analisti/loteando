@@ -1,0 +1,147 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 15px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu li a {
+    display: block;
+    color: #2ecc71;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #fff;
+}
+
+.menu li:hover {
+    transform: translateY(-5px);
+}
+
+#logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-image: url("/imagens/logo_branco.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header {
+    color: #27ae60;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #007BFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #27ae60;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #ccc;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dark-mode .StyledIconBase-ea9ulj-0 {
+    fill: #fff;
+}
+
+.styled__MenuBarItem-sc-1ita5x0-6 {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.styled__MenuBarItem-sc-1ita5x0-6 svg {
+    width: 20px;
+    height: 20px;
+    transition: fill 0.5s ease;
+}
+
+footer {
+    text-align: center;
+}
