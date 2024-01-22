@@ -274,5 +274,71 @@ getById('botaoImprimir').addEventListener('click', function () {
     imprimirCadastros();
 });
 
+// Função para contar o número de contratos em uma linha
+function countContractsInRow(row) {
+    return Array.from(row.getElementsByTagName("td"), cell => cell.getElementsByTagName("input")[0])
+        .filter(inputField => inputField && inputField.value.trim() !== "").length;
+}
 
+// Função para calcular o total de contratos
+function calculateTotalContracts() {
+    const rows = document.getElementById("contracts").getElementsByTagName("tr");
+    const totalContracts = Array.from(rows, countContractsInRow).reduce((a, b) => a + b, 0);
+
+    document.getElementById("total").textContent = "Total de contratos: " + totalContracts;
+}
+
+// Função para criar uma tabela HTML a partir dos dados da tabela
+function createHtmlTable(tableData) {
+    return tableData.reduce((html, row) => {
+        const rowHtml = row.reduce((rowHtml, cell) => rowHtml + `<td>${cell}</td>`, '');
+        return html + `<tr>${rowHtml}</tr>`;
+    }, '<table>') + '</table>';
+}
+
+// Função para capturar os dados da tabela
+function captureTableData() {
+    const rows = document.getElementById("contracts").querySelectorAll("tr");
+    return Array.from(rows, row => Array.from(row.querySelectorAll("td input"), cell => cell.value));
+}
+
+// Função para imprimir o documento
+function printDocument() {
+    // Remover botões
+    document.querySelectorAll("button").forEach(button => button.style.display = "none");
+
+    // Capturar o conteúdo da tabela
+    const tableData = captureTableData();
+
+    // Construir o HTML da tabela
+    const tableHtml = createHtmlTable(tableData);
+
+    // Criar elemento para impressão
+    const printDiv = document.createElement("div");
+    printDiv.classList.add("printable");
+    printDiv.innerHTML = new Date().toLocaleDateString("pt-BR");
+
+    // Adicionar o `div` ao documento e imprimir
+    document.body.appendChild(printDiv);
+    window.print();
+
+    // Remover o `div` após a impressão
+    document.body.removeChild(printDiv);
+}
+// Função para adicionar uma nova linha à tabela
+function addRow() {
+    var tableBody = document.getElementById("contracts-body");
+    var newRow = document.createElement("tr");
+
+    for (var i = 0; i < 3; i++) {  // Adiciona 3 células por padrão (ajuste conforme necessário)
+        var cell = document.createElement("td");
+        var input = document.createElement("input");
+        input.type = "text";
+        input.classList.add("contract-input");
+        cell.appendChild(input);
+        newRow.appendChild(cell);
+    }
+
+    tableBody.appendChild(newRow);
+}
 

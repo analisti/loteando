@@ -1,191 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imagens/dm.png" type="image/x-icon">
-    <title>Página em Construção</title>
-    <style>
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-image: url("imagens/construction.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .container {
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        h1 {
-            color: #3498db;
-        }
-
-        p {
-            color: #ecf0f1;
-        }
-
-        .form {
-            margin-top: 20px;
-        }
-
-        input[type="number"],
-        input[type="submit"],
-        .btn {
-            background-color: #3498db;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            width: 100%;
-        }
-
-        input[type="number"],
-        .campoPalpite {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            margin-right: 10px;
-            border: 1px solid #3498db;
-        }
-
-        input[type="submit"]:hover,
-        .btn:hover {
-            background-color: #2980b9;
-        }
-
-        .resultParas {
-            margin-top: 10px;
-        }
-
-        .ultimoResultado {
-            padding: 5px;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-    </style>
+    <title>Documento</title>
+    <link rel="stylesheet" type="text/css" href="acerto.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Página em Construção</h1>
-        <p>Enquanto isso, divirta-se com nosso joguinho interativo:</p>
 
-        <form class="form">
-            <label for="campoPalpite">Digite seu palpite:</label>
-            <input type="number" min="1" max="100" required id="campoPalpite" class="campoPalpite" />
-            <input type="submit" value="Enviar" class="enviarPalpite btn" />
-        </form>
+    <ul class="menu">
+        <li><a href="acerto.html">Você esta aqui</a></li>
+        <li><a href="cad_cliente.html">Cadastro de Clientes</a></li>
+        <li><a href="index.html">Controle de Lotes</a></li>
+    </ul>
 
-        <div class="resultParas">
-            <p class="palpites"></p>
-            <p class="ultimoResultado"></p>
-            <p class="baixoOuAlto"></p>
+    <header>
+        <div id="top-section">
+            <img id="logo" src="imagens/logoc&t.png" alt="Logo">
+            <h1 id="title">PROTOCOLO ENTREGA ACERTO</h1>
         </div>
+        <div id="input-section">
+            <p class="input-field">
+                <label for="empreendimento"></label>
+                <input type="text" placeholder="Nome do Loteamento" id="empreendimento">
+            </p>
+            <p class="input-field">
+                <label for="numero">n°</label>
+                <input type="text" placeholder="Número do Acerto" id="numero">
+            </p>
+        </div>
+    </header>
+    <main>
+        <section>
+            <table id="contracts" border="1">
+                <thead>
+                    <tr>
+                        <th colspan="3">CONTRATOS</th>
+                    </tr>
+                </thead>
+                <tbody id="contracts-body">
+                    <tr>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                        <td><input type="text" class="contract-input"></td>
+                    </tr>
 
-        <button onclick="goBack()" class="btn">Voltar</button>
-    </div>
-
-    <script>
-        let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-
-        const palpites = document.querySelector(".palpites");
-        const ultimoResultado = document.querySelector(".ultimoResultado");
-        const baixoOuAlto = document.querySelector(".baixoOuAlto");
-
-        const enviarPalpite = document.querySelector(".enviarPalpite");
-        const campoPalpite = document.querySelector(".campoPalpite");
-
-        let contadorPalpite = 1;
-        let resetarBotao;
-
-        enviarPalpite.addEventListener("click", checarPalpite);
-
-        function checarPalpite() {
-            const palpiteUsuario = Number(campoPalpite.value);
-            if (contadorPalpite === 1) {
-                palpites.textContent = "Palpites anteriores: ";
-            }
-
-            palpites.textContent += palpiteUsuario + " ";
-
-            if (palpiteUsuario === numeroAleatorio) {
-                ultimoResultado.textContent = "Parabéns! Você acertou!";
-                ultimoResultado.style.backgroundColor = "green";
-                baixoOuAlto.textContent = "";
-                setGameOver();
-            } else if (contadorPalpite === 10) {
-                ultimoResultado.textContent = "!!!GAME OVER!!!";
-                baixoOuAlto.textContent = "";
-                setGameOver();
-            } else {
-                ultimoResultado.textContent = "Errado!";
-                ultimoResultado.style.backgroundColor = "red";
-                if (palpiteUsuario < numeroAleatorio) {
-                    baixoOuAlto.textContent = "O último palpite foi muito baixo!";
-                } else if (palpiteUsuario > numeroAleatorio) {
-                    baixoOuAlto.textContent = "O último palpite foi muito alto!";
-                }
-            }
-
-            contadorPalpite++;
-            campoPalpite.value = "";
-            campoPalpite.focus();
-        }
-
-        function setGameOver() {
-            campoPalpite.disabled = true;
-            enviarPalpite.disabled = true;
-            resetarBotao = document.createElement("button");
-            resetarBotao.textContent = "Começar novo jogo";
-            document.body.appendChild(resetarBotao);
-            resetarBotao.addEventListener("click", resetGame);
-        }
-
-        function resetGame() {
-            contadorPalpite = 1;
-            const resetParas = document.querySelectorAll(".resultParas p");
-            for (const resetPara of resetParas) {
-                resetPara.textContent = "";
-            }
-
-            resetarBotao.parentNode.removeChild(resetarBotao);
-            campoPalpite.disabled = false;
-            enviarPalpite.disabled = false;
-            campoPalpite.value = "";
-            campoPalpite.focus();
-            ultimoResultado.style.backgroundColor = "white";
-            numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-        }
-
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+                </tbody>
+            </table>
+            <button onclick="addRow()">Adicionar Contrato</button>
+            <button onclick="calculateTotalContracts()">Contar contratos</button>
+            <button onclick="printDocument()">Imprimir</button>
+        </section>
+        <article>
+            <h2 id="total">Total de contratos:</h2>
+            <div class="signature">
+                <p>Representante do Escritório</p>
+            </div>
+            <div class="signature">
+                <p>Departamento Financeiro</p>
+            </div>
+        </article>
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>

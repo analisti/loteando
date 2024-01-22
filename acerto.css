@@ -1,0 +1,254 @@
+/* Estilos gerais do corpo */
+body {
+    width: 100%;
+    max-width: 21cm;
+    height: auto;
+    margin: 1.5cm auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu li a {
+    display: block;
+    color: #2ecc71;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #070707;
+}
+
+.menu li:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos para cabeçalho e artigo */
+header,
+article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilos específicos do cabeçalho */
+header {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para o logo */
+#logo {
+    width: 150px;
+    height: 40px;
+    order: 1;
+}
+
+/* Estilos para o título */
+#title {
+    text-align: right;
+    margin: 0;
+    order: 2;
+}
+
+/* Estilos para o campo de entrada */
+.input-field {
+    text-align: right;
+    margin: 5px;
+    order: 3;
+}
+
+/* Estilos para o input dentro do campo de entrada */
+.input-field input {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #4caf50;
+    transition: border-bottom .3s;
+}
+
+/* Estilos para o input focado dentro do campo de entrada */
+.input-field input:focus {
+    border-bottom: 2px solid #f44336;
+}
+
+/* Estilos para a seção superior */
+#top-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Estilos para a seção de entrada */
+#input-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Estilos para a seção principal */
+main {
+    page-break-inside: avoid;
+    width: 100%;
+}
+
+/* Estilos para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para as células da tabela */
+td {
+    text-align: center;
+}
+
+/* Estilos para a entrada do contrato */
+.contract-input {
+    display: inline-block;
+}
+
+/* Estilos para as células e cabeçalhos da tabela */
+td,
+th {
+    padding: 0.5rem;
+    border: 1px solid black;
+}
+
+/* Estilos para o cabeçalho da tabela */
+tr th {
+    background-color: rgb(151, 151, 151);
+}
+
+/* Estilos para hover na tabela */
+tr:hover {
+    background: #F1F1F1;
+}
+
+/* Estilos para o botão */
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 10px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Estilos para o botão focado */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para a assinatura */
+.signature {
+    margin-top: 1rem;
+    border-top: 1px solid #000;
+    width: 200px;
+    text-align: center;
+}
+
+/* Estilos específicos para impressão */
+@media print {
+    body {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    header {
+        margin-bottom: 0.5rem;
+    }
+
+    table,
+    .signature {
+        font-size: 14px;
+    }
+
+    .signature {
+        margin-top: 0.5rem;
+    }
+
+    tr th {
+        background-color: grey;
+    }
+
+    article {
+        margin-top: 4rem;
+    }
+
+    .contract-input {
+        text-align: center;
+        border: none;
+    }
+
+    #empreendimento {
+        border: none;
+    }
+
+    #numero {
+        text-align: left;
+        border: none;
+    }
+
+    /* Adicione a regra para ocultar o menu durante a impressão */
+    .menu {
+        display: none;
+    }
+}
+
+/* Estilos específicos para telas pequenas */
+@media screen and (max-width: 767px),
+screen and (max-width: 479px) {
+    body {
+        width: auto;
+        margin: 1rem;
+        max-width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    /* Adicionando estilo para indicar responsividade móvel */
+    table {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    /* Adicionando estilo para indicar responsividade móvel */
+    td,
+    th {
+        display: block;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    /* Adicionando estilo para indicar responsividade móvel */
+    tr {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #ddd;
+    }
+}
