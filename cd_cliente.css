@@ -145,3 +145,46 @@ button:active {
 footer {
     text-align: center;
 }
+
+/* Media Queries */
+@media print {
+    body {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    header {
+        margin-bottom: 0.5rem;
+    }
+
+    table,
+    .signature {
+        font-size: 14px;
+    }
+
+    .signature {
+        margin-top: 0.5rem;
+    }
+
+    tr th {
+        background-color: grey;
+    }
+
+    article {
+        margin-top: 4rem;
+    }
+
+    .contract-input {
+        text-align: center;
+        border: none;
+    }
+
+    #empreendimento {
+        border: none;
+    }
+
+    #numero {
+        text-align: left;
+        border: none;
+    }
+}
